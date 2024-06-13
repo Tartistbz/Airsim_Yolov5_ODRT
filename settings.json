@@ -1,0 +1,107 @@
+{
+  "SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/master/docs/settings.md",
+  "SettingsVersion": 1.2,
+  "SimMode": "Multirotor",
+  "CameraDefaults": {
+    "CaptureSettings": [
+      {
+        "ImageType": 0,
+        "Width": 1024,
+        "Height": 768,
+        "FOV_Degrees": 90,
+        "AutoExposureSpeed": 100,
+        "AutoExposureBias": 0,
+        "AutoExposureMaxBrightness": 0.64,
+        "AutoExposureMinBrightness": 0.03,
+        "MotionBlurAmount": 0,
+        "TargetGamma": 1.0,
+        "ProjectionMode": "",
+        "OrthoWidth": 5.12
+      }
+    ]
+  },
+  "Vehicles": {
+    "SimpleFlight": {
+      "VehicleType": "SimpleFlight",
+      "RC": {
+        "RemoteControlID": 0
+      },
+      "Sensors": {
+        "Distance": {
+          "SensorType": 5,
+          "Enabled": true,
+          "DrawDebugPoints": true,
+          "MaxDistance": 10000
+        },
+        "Lidar1": {
+          "SensorType": 6,
+          "Enabled": true,
+          "NumberOfChannels": 16,
+          "RotationsPerSecond": 10,
+          "PointsPerSecond": 100000,
+          "X": 0,
+          "Y": 0,
+          "Z": -1,
+          "Roll": 0,
+          "Pitch": 0,
+          "Yaw": 0,
+          "VerticalFOVUpper": -15,
+          "VerticalFOVLower": -25,
+          "HorizontalFOVStart": -20,
+          "HorizontalFOVEnd": 20,
+          "DrawDebugPoints": true,
+          "DataFrame": "SensorLocalFrame"
+        },
+        "Lidar2": {
+          "SensorType": 6,
+          "Enabled": true,
+          "NumberOfChannels": 4,
+          "RotationsPerSecond": 10,
+          "PointsPerSecond": 10000,
+          "X": 0,
+          "Y": 0,
+          "Z": -1,
+          "Roll": 0,
+          "Pitch": 0,
+          "Yaw": 0,
+          "VerticalFOVUpper": -15,
+          "VerticalFOVLower": -25,
+          "DrawDebugPoints": true,
+          "DataFrame": "SensorLocalFrame"
+        }
+      }
+    }
+  },
+  "SubWindows": [
+    {
+      "WindowID": 0,
+      "ImageType": 3,
+      "CameraName": "front_center",
+      "Visible": true
+    },
+    {
+      "WindowID": 1,
+      "ImageType": 0,
+      "CameraName": "bottom_center",
+      "Visible": true
+    },
+    {
+      "WindowID": 2,
+      "ImageType": 0,
+      "CameraName": "back_center",
+      "Visible": true
+    }
+  ],
+  "OriginGeopoint": {
+    "Latitude": 30,
+    "Longitude": 120,
+    "Altitude": 122
+  },
+  "TimeOfDay": {
+    "Enabled": true,
+    "StartDateTime": "2024-6-13 18:30:00",
+    "CelestialClockSpeed": 1,
+    "StartDateTimeDst": true,
+    "UpdateIntervalSecs": 60
+  }
+}
