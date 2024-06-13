@@ -43,6 +43,10 @@ pygame.display.set_caption('keyboard ctrl @FPV')
 # 填充窗口背景色
 screen.fill((0, 0, 0))
 
+existing_data_cleared = False
+data_path = "lidar/data"
+shutil.rmtree(data_path)
+os.makedirs(data_path, exist_ok=True)
 # 主循环
 while True:
     pitch_rate = 0.0
@@ -131,10 +135,6 @@ while True:
     print(f"Distance & Lidar sensor data: Drone1: {data_distance.distance}")
     lidar_names = ['Lidar1', 'Lidar2']
     vehicle_name = "SimpleFlight"
-    existing_data_cleared = False
-    data_path = "lidar/data"
-    shutil.rmtree(data_path)
-    os.makedirs(data_path, exist_ok=True)
     for lidar_name in lidar_names:
         filename = f"{vehicle_name}_{lidar_name}_pointcloud.asc"
         #指定存储目录
